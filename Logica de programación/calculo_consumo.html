@@ -13,6 +13,14 @@
 
 	<p>Por otro lado, con el alcohol: el mismo tanque de 40 litros hace un recorrido de 300 kilómetros. ¿Cuál es el consumo de alcohol por kilómetro recorrido?</p>
 	<script>
+
+		function saltarLinea () {
+			document.write("<br> <br> <br> <br> <br>")
+		}
+		function imprimir (frase) {
+			document.write(frase);
+			saltarLinea();
+		}
 	
 	let gasolina = 40;
 	let alcohol = 40;
@@ -22,9 +30,13 @@
 	let resultadoAlcohol = (kilometrosRecorridosAlcohol/alcohol);
 
 
-	document.write(`Los litros consumidos por kilometro es de: ${resultadoGasolina} litros de Gasolina Y ${resultadoAlcohol} litros de Alcohol `);
+	imprimir(`Los litros consumidos por kilometro es de: ${resultadoGasolina} litros de Gasolina Y ${resultadoAlcohol} litros de Alcohol <hr>`);
+	imprimir("Practica de Diferencia de Edades");
 
-
+	let edadHermano = 10;
+	let edadMia = 23;
+	let resultadoEdad = edadMia - edadHermano;
+	imprimir(`La diferencia de edad es de ${resultadoEdad}`)
 	</script>
 
 </body>
