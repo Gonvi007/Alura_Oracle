@@ -30,7 +30,28 @@
 
 		calcularImcUsuario = calcularIMC(pesoUsuario, alturaUsuario);
 
-		imprimir(`${nombreUsuario} su IMC calculado es: ${calcularImcUsuario}`)
+		imprimir(`${nombreUsuario} su IMC calculado es: ${calcularImcUsuario}`);
+
+
+		if (calcularImcUsuario < 18.5) {
+			imprimir("IMC abajo de lo recomendado");
+		}
+
+		if (calcularImcUsuario >= 18.5) {
+			if (calcularImcUsuario < 25) {
+				imprimir("IMC esta Normal");
+			}
+		}
+
+		if (calcularImcUsuario >= 25) {
+			if (calcularImcUsuario < 30) {
+				imprimir("IMC considerado Sobrepeso");
+			}
+		}
+
+		if (calcularImcUsuario >= 30) {
+			imprimir("IMC considerado como Obesidad");
+		}
 	</script>
 </body>
 </html>
