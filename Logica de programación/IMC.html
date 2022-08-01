@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>...</title>
+</head>
+<body>
+	<h1>Progamita IMC</h1>
+
+	<script>
+		
+		function saltarLinea() {
+			document.write("<br> <br> <br>");
+		}
+
+		function imprimir(frase) {
+			document.write(frase);
+			saltarLinea();
+		}
+
+		calcularIMC = (peso, altura, nombre) => {
+			imcPersona = peso / (altura * altura);
+			imprimir(`El IMC calculado de ${nombre} es: ${imcPersona}`)
+		}
+
+
+		calcularIMC(83, 1.55, "Alexis");
+
+
+		calcularIMC2 = (peso1, altura1, nombre1, peso2, altura2, nombre2 ) => {
+
+			imcPersona1 = peso1 / (altura1 * altura1);
+			imcPersona2 = peso2 / (altura2 * altura2);
+
+			promedioIMC = (imcPersona1 + imcPersona2 / 2);
+			imprimir(`El IMC promedio calculado de ${nombre1} y ${nombre2} es: ${promedioIMC}`);
+
+		}
+
+		calcularIMC2(83, 1.55, "Alexis", 70, 166, "Erick");
+		
+	</script>
+</body>
+</html>
