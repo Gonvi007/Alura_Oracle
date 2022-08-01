@@ -19,27 +19,18 @@
 			saltarLinea();
 		}
 
-		calcularIMC = (peso, altura, nombre) => {
-			imcPersona = peso / (altura * altura);
-			imprimir(`El IMC calculado de ${nombre} es: ${imcPersona}`)
+		calcularIMC = (peso, altura) => {
+			return (peso / (altura * altura));
 		}
 
 
-		calcularIMC(83, 1.55, "Alexis");
+		nombreUsuario = prompt("Ingrese su nombre: ");
+		pesoUsuario = prompt(`${nombreUsuario} ingrese su peso: `);
+		alturaUsuario = prompt(`${nombreUsuario} ingresesu altura: `);
 
+		calcularImcUsuario = calcularIMC(pesoUsuario, alturaUsuario);
 
-		calcularIMC2 = (peso1, altura1, nombre1, peso2, altura2, nombre2 ) => {
-
-			imcPersona1 = peso1 / (altura1 * altura1);
-			imcPersona2 = peso2 / (altura2 * altura2);
-
-			promedioIMC = (imcPersona1 + imcPersona2 / 2);
-			imprimir(`El IMC promedio calculado de ${nombre1} y ${nombre2} es: ${promedioIMC}`);
-
-		}
-
-		calcularIMC2(83, 1.55, "Alexis", 70, 166, "Erick");
-		
+		imprimir(`${nombreUsuario} su IMC calculado es: ${calcularImcUsuario}`)
 	</script>
 </body>
 </html>
