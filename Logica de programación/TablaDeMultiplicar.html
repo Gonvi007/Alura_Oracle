@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tabla de multiplicar</title>
+</head>
+<body>
+
+	<script>
+		
+		function saltarLinea() {
+			document.write("<br> <br>");
+		}
+
+		function imprimir(frase) {
+			document.write(frase);
+			saltarLinea();
+		}
+
+
+		// let multiplicador = 0;
+		// while (multiplicador <= 10) {
+		// 	imprimir(5 * multiplicador);
+		// 	multiplicador = multiplicador +1;
+		// }
+
+		for (var multiplicador = 0; multiplicador <= 10; multiplicador++) {
+
+			imprimir(5 * multiplicador);
+		}
+
+	</script>
+
+</body>
+</html>

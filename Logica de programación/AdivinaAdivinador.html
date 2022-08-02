@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>...</title>
+</head>
+<body>
+	<h1>Juego de Adivinar</h1>
+
+	<script>
+		
+		function saltarLinea() {
+			document.write("<br> <br> <br>");
+		}
+
+		function imprimir(frase) {
+			document.write(frase);
+			saltarLinea();
+		}
+
+		let numeroPensado = Math.round(Math.random()*10);
+		let intentos = 5;
+		contador = 1;
+
+
+		alert("Tienes 5 intentos para adivinar el numero");
+
+		while ( contador <= intentos) {
+
+			let numeroUsuario = parseInt(prompt("Ingrese un número entreo 0 - 10")); 
+
+			if (numeroPensado == numeroUsuario) {
+
+				alert(`Yeeeeiiiiii, Acertaste el numero pensado era ${numeroPensado}`);
+				break;
+
+			} else {
+				alert(`Errooor, intentalo de nuevo`);
+			}
+
+			contador++;
+		}
+
+		imprimir(`Gracias por jugar, el numero era: ${numeroPensado}`);
+
+
+
+		// var edad = parseInt(prompt("¿Cuál es tu edad?"));
+  //   var tieneLicencia = prompt("¿Tienes licencia? Responde S o N");
+
+  //   if((edad >= 18) && (tieneLicencia == "S")) {
+  //           imprimir("Puedes conducir");
+  //       }
+
+  //   else {
+  //       imprimir("No puedes conducir");
+  //   }
+
+
+	</script>
+</body>
+</html>
