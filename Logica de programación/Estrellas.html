@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Estrellas</title>
+</head>
+<body>
+
+	<h1>Estrelladas</h1>
+	
+<script>
+	function saltarLinea() {
+		document.write("<br> <br> <br>");
+	}
+
+	function imprimir(frase) {
+		document.write(frase);
+		saltarLinea();
+	}
+
+
+	for(var lineas = 1; lineas <= 3; lineas++) {
+		for (var columnas = 1; columnas <= 10; columnas++) {
+			document.write("*");
+		}
+		saltarLinea();
+	}
+
+			saltarLinea();
+	imprimir("FIN");
+
+	</script>
+
+</body>
+</html>
