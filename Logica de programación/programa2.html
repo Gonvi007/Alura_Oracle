@@ -11,25 +11,38 @@
 
 	<script type="text/javascript">
 		
+		function dibujarCuadrados(x, y, color) {
+
 		let pantalla = document.querySelector("canvas");
 		let pincel = pantalla.getContext("2d");
 
-		pincel.fillStyle = "green";
-		pincel.fillRect(0, 0, 50, 50);
+		pincel.fillStyle = color;
+		pincel.fillRect(x, y, 50, 50);
 		pincel.strkeStyle = "black";
-		pincel.strokeRect(0, 0, 50, 50);
+		pincel.strokeRect(x, y, 50, 50);
 
-		pincel.fillRect(50, 0, 50, 50);
-		pincel.strokeRect(50, 0, 50, 50);
+		}
 
-		pincel.fillRect(100, 0, 50, 50);
-		pincel.strokeRect(150, 0, 50, 50);
+		// dibujarCuadrados(0, 0, "red");
+		// dibujarCuadrados(50, 50, "black");
+		// dibujarCuadrados(0, 100, "green");
 
-		pincel.fillRect(150, 0, 50, 50);
-		pincel.strokeRect(150, 0, 50, 50);
+		// dibujarCuadrados(100, 0, "red");
+		// dibujarCuadrados(150, 50, "black");
+		// dibujarCuadrados(100, 100, "green");
 
-		pincel.fillRect(200, 0, 50, 50);
-		pincel.strokeRect(200, 0, 50, 50);		
+		let y = 0;
+		while(y < 400) {
+			dibujarCuadrados(0, y, "green");
+			dibujarCuadrados(50, y, "green");
+			dibujarCuadrados(100, y, "white");
+			dibujarCuadrados(150, y, "white");
+			dibujarCuadrados(200, y, "red");
+			dibujarCuadrados(250, y, "red");
+
+			y = y + 50;
+		}
+		
 	</script>
 </body>
 </html>
