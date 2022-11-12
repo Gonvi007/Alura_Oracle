@@ -1,37 +1,40 @@
+//Definición de una lista con tipo de dato alfanumérico
+const ciudadesDisponibles = new Array("Bogotá","Lima","Santiago","Montevideo");
+//console.log(ciudadesDisponibles);
 
-// Definicion de una lista con tipo de dato alfanum+erico
-const ciudadesDisponibles = new Array("Bogotá", "Lima", "Santiago, MonteVideo");
+//Definición de una lista de forma abreviada
+const paisesDisponibles = ["Colombia","Perú","Chile","Brasil","Argentina","Uruguay","Venezuela"];
 
-// Definición de una lista de forma abreviada
-const paisesDisponibles = ["Colombia", "Perú", "Chile", "Brasil", "Argentina", "blabla"];
+const cantidadCiudades = ciudadesDisponibles.length;
 
-const cantidaCiudades = ciudadesDisponibles.length;
-// console.log(`En la lista de ciudades tenemos ${cantidaCiudades} elementos`);
-// console.log(`En la lista de paises tenemos ${paisesDisponibles.length} elementos`);
+console.log(`En la lista de ciudades tenemos ${cantidadCiudades} elementos`);
+console.log(`En la lista de paises tenemos ${paisesDisponibles.length} elementos`);
 
-// Remover el primer elemento
+//Remover el primer elemento
 ciudadesDisponibles.shift();
-// console.log(ciudadesDisponibles);
-// console.log(`En la lista de paises tenemos ${ciudadesDisponibles.length} elementos`);
-
-// Remover el ultimo elemento
+console.log(ciudadesDisponibles);
+console.log(`En la lista de ciudades tenemos ${ciudadesDisponibles.length} elementos`);
+//Remover el último elemento
 ciudadesDisponibles.pop();
-// console.log(ciudadesDisponibles);
-// console.log(`En la lista de paises tenemos ${ciudadesDisponibles.length} elementos`);
+console.log(ciudadesDisponibles);
+console.log(`En la lista de ciudades tenemos ${ciudadesDisponibles.length} elementos`);
 
-// Filtro de elementos de la lista.
-const paisesFiltrados = paisesDisponibles.filter((e)=> e.length >= 6);
-console.log(paisesFiltrados)
+//Filtro de elementos de la lista.
+const paisesFiltrados = paisesDisponibles.filter((e) => e.length > 6);
+console.log(paisesFiltrados);
 
-// Unificar los elementos en una cadena de caracteres
+//Unificar los elementos en una cadena de caracteres
 console.log(paisesDisponibles.join('-'));
 
-// Ordenar la lista
+//Ordenar la lista
 console.log(paisesDisponibles.sort());
 
-// Conociendo la posicion
-console.log(`Perú esta en la posicion: ${paisesDisponibles.indexOf('Perú')}`);
+//Coniciendo la posición
+console.log(`Perú está en la posición: ${paisesDisponibles.indexOf('Perú')}`);
 
-// Unificar dos listas
+//Unificar dos listas.
 const listaPaisesYCiudades = paisesDisponibles.concat(ciudadesDisponibles);
+console.log('Lista de paises y ciudades:');
 console.log(listaPaisesYCiudades);
+console.log('Lista de paises:');
+console.log(paisesDisponibles);
