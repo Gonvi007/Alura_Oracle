@@ -1,13 +1,18 @@
-const inputNacimiento = document.querySelector("#birth");
+export function valida(input) {
+    const tipoDeInput = input.dataset.tipo;
+    if (validadores[tipoDeInput]) {
+        validadores[tipoDeInput](input);
+    }
+}
 
-inputNacimiento.addEventListener("blur", (evento) => {
-    validarNacimiento(evento.target);
-});
+const validadores = {
+    nacimiento: (input) => validadoresNacimiento(input),
+}
 
 function validarNacimiento(input) {
     const fechaCliente = new Date(input.value);
     let mensaje = "";
-    if (!mayorEdad(fechaCliente)) {
+    if (!mayorDeEdad(fechaCliente)) {
         mensaje = "Debes tener al menos 18 años";
     };
     input.setCustomValidity(mensaje);
