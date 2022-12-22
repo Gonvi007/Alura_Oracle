@@ -16,11 +16,20 @@ class CuentaBancaria {
         this.agencia = '';
     }
     depositoEnCuenta(valor){
-        this.saldoCuenta = this.saldoCuenta+valor;
-        // this.saldoCuenta += valor;
+        if (valor >= 0)
+            this.saldoCuenta = this.saldoCuenta+valor;
+            // this.saldoCuenta += valor;
+        return this.saldoCuenta;
+
     }
     retiroDeCuenta(valor) {
-        this.saldoCuenta = this.saldoCuenta-valor;
+        if (valor <= this.saldoCuenta)
+            this.saldoCuenta = this.saldoCuenta-valor;
+        return this.saldoCuenta;
+    }
+
+    verSaldo() {
+        return this.saldoCuenta;
     }
 }
 
@@ -41,7 +50,12 @@ cuentaBancaria1.retiroDeCuenta(1000);
 console.log(cuentaBancaria1.saldoCuenta);
 //-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
+let saldoCuenta = cuentaDeAlexis.verSaldo();
+console.log(`El sueldo actual es ${saldoCuenta}`);
 const cuentaDeAlexis = new Cliente();
+
+
+
 cuentaDeAlexis.nombreCliente = "Alexis Gonzalez Villanueva";
 cuentaDeAlexis.dniCliente = "34567";
 cuentaDeAlexis.rutaCliente = "Agv45678";
@@ -53,8 +67,11 @@ const cuentaBancariaAGV = new CuentaBancaria();
 console.log(cuentaDeAlexis);
 cuentaBancariaAGV.depositoEnCuenta(999);
 console.log(cuentaBancariaAGV);
-cuentaBancariaAGV.retiroDeCuenta(998);
+cuentaBancariaAGV.retiroDeCuenta(999);
 console.log(cuentaBancariaAGV);
+cuentaBancariaAGV.depositoEnCuenta(-9);
+console.log(cuentaBancariaAGV);
+
 //-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 // console.log(Cliente1);
