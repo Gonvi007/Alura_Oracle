@@ -26,14 +26,14 @@ cliente2.rutCliente = '98765';
 const cuentaDeMaria = new CuentaCorriente();
 cuentaDeMaria.numero = '2';
 cuentaDeMaria.agencia = '002';
-// cuentaDeMaria.cliente = cliente2;
+cuentaDeMaria.setCliente = cliente2;
 
-if (cuentaDeMaria.cliente){
-    console.log(cuentaDeMaria.cliente);
-}else{
-    console.log(cuentaDeMaria);
-}
-
+// if (cuentaDeMaria.cliente){
+//     console.log(cuentaDeMaria.cliente);
+// }else{
+//     console.log(cuentaDeMaria);
+// }
+console.log(cuentaDeMaria.getCliente);
 let parametroValor = 100;
 
 console.log('Parámetro Valor', parametroValor);
