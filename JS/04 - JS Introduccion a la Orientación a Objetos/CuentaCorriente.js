@@ -7,12 +7,12 @@ export class CuentaCorriente
     agencia;
     #saldo;
 
-    set cliente(valor) {
+    set setCliente(valor) {
         if (valor instanceof Cliente)
         this.#cliente = valor;
 
     }
-    get cliente() {
+    get getCliente() {
         return this.#cliente;
     }
 
