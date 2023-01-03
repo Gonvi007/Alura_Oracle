@@ -3,21 +3,33 @@ export class Cuenta {
     #saldo;
 
     constructor(cliente, numero, agencia, saldo) {
-    	this.#cliente = cliente;
+        this.#cliente = cliente;
     	this.numero = numero;
     	this.agencia = agencia;
     	this.#saldo = saldo;
     }
 
     depositoEnCuenta(valor) {
-        if (valor > 0)
+        if (valor > 0) {
             this.#saldo += valor;
+        }
         return this.#saldo;
     }
 
     retirarDeCuenta(valor) {
-        if (valor <= this.#saldo)
+        retirarDeCuenta(valor, 0);
+    }
+
+    _retirarDeCuenta(valor, comision) {
+        valor = valor * (1 + comision/100);
+        // if (this.tipo == 'Corriente') {
+        //     valor = valor * 1.05;
+        // } else if (this.tipo == 'Ahorro') {
+        //     valor = valor * 1.02;
+        // }
+        if (valor <= this.#saldo) {
             this.#saldo -= valor;
+        }
         return this.#saldo;
     }
 
@@ -30,5 +42,9 @@ export class Cuenta {
         cuentaDestino.depositoEnCuenta(valor);
         valor = 200;
         valor = valor*1000;
+    }
+
+    prueba() {
+        console.log('Metodo Padre');
     }
 }
