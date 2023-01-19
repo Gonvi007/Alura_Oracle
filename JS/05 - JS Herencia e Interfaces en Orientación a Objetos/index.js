@@ -1,21 +1,20 @@
 /*Importación de clases*/
 import {Cliente} from './Cliente.js'
-import {CuentaCorriente} from './CuentaCorriente.js';
-import {CuentaAhorro} from './CuentaAhorro.js';
-import {Cuenta} from './Cuenta.js';
-import {CuentaNomina} from './CuentaNomina.js';
+import {CuentaCorriente} from './Cuentas/CuentaCorriente.js';
+import {CuentaAhorro} from './Cuentas/CuentaAhorro.js';
+import {Cuenta} from './Cuentas/Cuenta.js';
+import {CuentaNomina} from './Cuentas/CuentaNomina.js';
+import { Empleado } from './Empleados/Empleado.js';
+import { Director } from './Empleados/Director.js';
+import { Gerente } from './Empleados/Gerente.js';
 
 const cliente = new Cliente('Leonardo','13804050','123224');
 const cliente2 = new Cliente('María','16979808','8989');
 
-const cuentaDeLeonardo = new CuentaCorriente(cliente, '1', '001');
-const cuentaDeMaria = new CuentaCorriente(cliente2, '2', '002');
+const empleado = new Empleado('Juan Perez', '123456', 10000);
+const gerente = new Gerente('Pedrito Rivas', '876543', 12000);
+const director = new Director('Elenita', '764527', 15000);
 
-const cuentaAhorroLeonardo = new CuentaAhorro(cliente, '5678', '001', 0);
-
-const cuentaNominaLeonardo = new CuentaNomina(cliente, '123', '002', 100);
-cuentaNominaLeonardo.depositoEnCuenta(150);
-console.log(cuentaNominaLeonardo.verSaldo());
-
-cuentaNominaLeonardo.retirarDeCuenta(50);
-console.log(cuentaNominaLeonardo.verSaldo());
+console.log(empleado.verBonificacion());
+console.log(gerente.verBonificacion());
+console.log(director.verBonificacion());
